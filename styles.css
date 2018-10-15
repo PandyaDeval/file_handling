@@ -1,0 +1,51 @@
+body{
+	font-weight:bold;
+	background-color:lightgreen;
+}
+
+
+button{
+	display: inline-block;
+	margin-left:10px;
+	margin-right:10px;
+	background-color:black;
+	border-color:darkblue;
+	color:blue;
+	width:150px;
+	height:30px;
+	font-size:18px;
+}
+
+
+
+
+input.xyz{
+	display: inline-block;
+	margin-left:10px;
+	margin-right:10px;
+	background-color:black;
+	border-color:darkblue;
+	color:blue;
+	width:150px;
+	height:30px;
+	font-size:18px;
+}
+
+button:hover{
+	border-color:red;
+	color:red;
+}
+
+input.xyz:hover{
+	border-color:red;
+	color:red;
+}
+
+pre.viewfile{
+	background-color:lightyellow;
+}
+
+
+textarea{
+	background-color:lightyellow;
+}

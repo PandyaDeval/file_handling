@@ -1,6 +1,7 @@
 <html>
+<link rel='stylesheet' href='styles.css'>
 <body>
-<a href='index.php'>Home</a><br><br>
+<a href='index.php'><button>Home</button></a><br><br>
 
 <form method='POST' enctype="multipart/form-data">
 Choose File <input type='file' name='textfile' accept='.txt'/><br><br>

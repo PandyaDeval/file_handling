@@ -1,4 +1,5 @@
 <html>
+<link rel='stylesheet' href='styles.css'>
 <script>
 function filesearch(operation){
 	if(operation=="search"){
@@ -15,15 +16,15 @@ function filesearch(operation){
 <body>
 <pre>
 
-<a href='upload.php'>Upload File</a>
+<a href='upload.php'><button>Upload File</button></a>
 <form action="operation.php" method='POST'>
 
-View File<input type='radio' onclick="filesearch('view')" name='operation' value='view'/>	Search in File<input type='radio' value='search' onclick='filesearch("search")' name='operation'/> 	Delete File(s)<input type='radio' value='delete' onclick="filesearch('delete')" name='operation'/> 	Edit File<input type='radio' value='edit' onclick="filesearch('edit')" name='operation'/>
+  View File<input type='radio' onclick="filesearch('view')" name='operation' value='view'/>	Search in File<input type='radio' value='search' onclick='filesearch("search")' name='operation'/> 	Delete File(s)<input type='radio' value='delete' onclick="filesearch('delete')" name='operation'/> 	Edit File<input type='radio' value='edit' onclick="filesearch('edit')" name='operation'/>
 
-<div id='searchfield'></div>
+  <div id='searchfield'></div>
 
 
-FILES:-
+  FILES:-
 
 
 <?php
@@ -42,13 +43,13 @@ $fetch_qry="SELECT `name` from `ass4`";
 $fetch_data=(mysqli_query($con,$fetch_qry));
 while($count>0){
 	$row=mysqli_fetch_row($fetch_data);
-	echo "<input type='checkbox' name='checklist[]' value='$row[0]'/>	$row[0]<br><br>";
+	echo "  <input type='checkbox' name='checklist[]' value='$row[0]'/>	$row[0]<br><br>";
 	$count-=1;
 }
 
 ?>
 
-<input type='submit' name='submit'/>
+<input class='xyz' type='submit' name='submit'/>
 
 </form>
 </pre>

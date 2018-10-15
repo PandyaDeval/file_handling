@@ -6,13 +6,13 @@ if(!mysqli_select_db($con,"u16co010")){
 	mysqli_select_db($con,"u16co010");
 }
 
-echo "<a href='index.php'>Home</a><br><br>";
+echo "<link rel='stylesheet' href='styles.css'><a href='index.php'><button>Home</button></a><br><br>";
 @$operation=$_POST['operation'];
 if($operation=='view'){
 	$filename=$_POST['checklist'][0];
 	$fetch_qry="SELECT `data` from `ass4` WHERE name='$filename'";
 	$fetch_data=mysqli_fetch_row(mysqli_query($con,$fetch_qry));
-	echo "<pre>";
+	echo "<pre class='viewfile'>";
 	echo nl2br($fetch_data[0]);
 	echo "</pre>";
 }
@@ -52,7 +52,7 @@ else if($operation=='edit'){
 	echo "<form method='POST' action='edit_success.php'>
 	<textarea style='width:70%;height:70%;margin:10%;' name='edittedtext'>$fetch_data</textarea><br>
 	<input type='hidden' name='filename' value='$filename'/>
-	<input type='submit' name='submit'/>
+	<input class='xyz' type='submit' name='submit'/>
 	</form>";
 }
 else{
